@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "randommorph",
+  "version": "0.7.0+26.3",
+  "name": "RandomMorph Fabric",
+  "description": "Native morphs, vanilla hearts/air, Warden vibration senses, species-aware goals/Brain sensors and opt-in instincts.",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "kr.randommorph.fabric.RandomMorphMod"
+    ],
+    "client": [
+      "kr.randommorph.fabric.client.RandomMorphClient"
+    ]
+  },
+  "mixins": [
+    "randommorph.mixins.json",
+    {
+      "config": "randommorph.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=0.19.5",
+    "minecraft": "26.3",
+    "java": ">=25",
+    "fabric-api": ">=0.161.0+26.3"
+  },
+  "breaks": {
+    "randommorph_client": "*"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "package": "kr.randommorph.fabric.client.mixin",
+  "compatibilityLevel": "JAVA_25",
+  "client": [
+    "LevelExtractorMixin",
+    "LocalFlightMixin",
+    "MorphHudMixin",
+    "InstinctInputMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

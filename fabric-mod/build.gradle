@@ -1,0 +1,55 @@
+plugins { id 'net.fabricmc.fabric-loom' version '1.17.21' }
+version = '0.7.0+26.3'
+group = 'kr.randommorph'
+base { archivesName = 'RandomMorph-Fabric' }
+repositories { mavenCentral() }
+loom {
+    splitEnvironmentSourceSets()
+    mods { randommorph { sourceSet sourceSets.main; sourceSet sourceSets.client } }
+}
+dependencies {
+    minecraft 'com.mojang:minecraft:26.3'
+    implementation 'net.fabricmc:fabric-loader:0.19.5'
+    implementation 'net.fabricmc.fabric-api:fabric-api:0.161.0+26.3'
+    testImplementation platform('org.junit:junit-bom:5.13.4')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    testImplementation 'org.ow2.asm:asm-tree:9.10.1'
+}
+java { toolchain { languageVersion = JavaLanguageVersion.of(25) }; withSourcesJar() }
+tasks.withType(JavaCompile).configureEach { options.release = 25; options.encoding = 'UTF-8' }
+test { useJUnitPlatform(); classpath += sourceSets.client.compileClasspath }
+jar { from('LICENSE') { rename { "${it}_RandomMorph" } } }
+
+// Offline, headless loader probes. Their classes are never shipped in the mod JAR.
+sourceSets {
+    test {
+        compileClasspath += sourceSets.client.output + sourceSets.client.compileClasspath
+        runtimeClasspath += sourceSets.client.output
+    }
+    verify {
+        java.srcDir 'src/verify/java'
+        compileClasspath = sourceSets.main.output + sourceSets.main.compileClasspath + sourceSets.client.output + sourceSets.client.compileClasspath
+        runtimeClasspath = output + compileClasspath
+    }
+}
+['Server': 'SERVER', 'Client': 'CLIENT'].each { label, side ->
+    tasks.register("verify${label}Mixins", JavaExec) {
+        dependsOn jar, verifyClasses
+        javaLauncher = javaToolchains.launcherFor { languageVersion = JavaLanguageVersion.of(25) }
+        mainClass = 'kr.randommorph.verify.MixinBoot'
+        def libraries = side == 'SERVER' ? sourceSets.main.runtimeClasspath : sourceSets.client.runtimeClasspath
+        classpath = sourceSets.verify.output.filter { it.exists() } + libraries.filter { it.name.endsWith('.jar') }
+        args side
+        systemProperty 'fabric.development', 'true'
+        systemProperty 'fabric.addMods', tasks.jar.archiveFile.get().asFile.absolutePath
+        systemProperty 'java.awt.headless', 'true'
+        doFirst {
+            def probeDir = layout.projectDirectory.dir("work/mixin-${side.toLowerCase()}").asFile
+            probeDir.mkdirs()
+            workingDir probeDir
+        }
+    }
+}
+tasks.register('verifyMixins') { dependsOn verifyServerMixins, verifyClientMixins }
+tasks.named('check') { dependsOn verifyMixins }

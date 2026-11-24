@@ -1,0 +1,374 @@
+{
+  "morphIntervalSeconds": 60,
+  "creeperSuicide": true,
+  "dolphinDryOutSeconds": 15,
+  "axolotlDryOutSeconds": 15,
+  "blockDestruction": true,
+  "respectMobGriefing": true,
+  "speciesAi": true,
+  "blazeImpactExplosion": false,
+  "blazeExplosionPower": 0.5,
+  "mobs": {
+    "allay": {
+      "enabled": true,
+      "weight": 1
+    },
+    "armadillo": {
+      "enabled": true,
+      "weight": 1
+    },
+    "axolotl": {
+      "enabled": true,
+      "weight": 1
+    },
+    "bat": {
+      "enabled": true,
+      "weight": 1
+    },
+    "bee": {
+      "enabled": true,
+      "weight": 1
+    },
+    "blaze": {
+      "enabled": true,
+      "weight": 1
+    },
+    "bogged": {
+      "enabled": true,
+      "weight": 1
+    },
+    "breeze": {
+      "enabled": true,
+      "weight": 1
+    },
+    "camel": {
+      "enabled": true,
+      "weight": 1
+    },
+    "camel_husk": {
+      "enabled": true,
+      "weight": 1
+    },
+    "cat": {
+      "enabled": true,
+      "weight": 1
+    },
+    "cave_spider": {
+      "enabled": true,
+      "weight": 1
+    },
+    "chicken": {
+      "enabled": true,
+      "weight": 1
+    },
+    "cod": {
+      "enabled": true,
+      "weight": 1
+    },
+    "copper_golem": {
+      "enabled": true,
+      "weight": 1
+    },
+    "cow": {
+      "enabled": true,
+      "weight": 1
+    },
+    "creaking": {
+      "enabled": true,
+      "weight": 1
+    },
+    "creeper": {
+      "enabled": true,
+      "weight": 1
+    },
+    "dolphin": {
+      "enabled": true,
+      "weight": 1
+    },
+    "donkey": {
+      "enabled": true,
+      "weight": 1
+    },
+    "drowned": {
+      "enabled": true,
+      "weight": 1
+    },
+    "elder_guardian": {
+      "enabled": true,
+      "weight": 1
+    },
+    "ender_dragon": {
+      "enabled": true,
+      "weight": 0.1
+    },
+    "enderman": {
+      "enabled": true,
+      "weight": 1
+    },
+    "endermite": {
+      "enabled": true,
+      "weight": 1
+    },
+    "evoker": {
+      "enabled": true,
+      "weight": 1
+    },
+    "fox": {
+      "enabled": true,
+      "weight": 1
+    },
+    "frog": {
+      "enabled": true,
+      "weight": 1
+    },
+    "ghast": {
+      "enabled": true,
+      "weight": 1
+    },
+    "giant": {
+      "enabled": true,
+      "weight": 1
+    },
+    "glow_squid": {
+      "enabled": true,
+      "weight": 1
+    },
+    "goat": {
+      "enabled": true,
+      "weight": 1
+    },
+    "guardian": {
+      "enabled": true,
+      "weight": 1
+    },
+    "happy_ghast": {
+      "enabled": true,
+      "weight": 1
+    },
+    "hoglin": {
+      "enabled": true,
+      "weight": 1
+    },
+    "horse": {
+      "enabled": true,
+      "weight": 1
+    },
+    "husk": {
+      "enabled": true,
+      "weight": 1
+    },
+    "illusioner": {
+      "enabled": true,
+      "weight": 1
+    },
+    "iron_golem": {
+      "enabled": true,
+      "weight": 1
+    },
+    "llama": {
+      "enabled": true,
+      "weight": 1
+    },
+    "magma_cube": {
+      "enabled": true,
+      "weight": 1
+    },
+    "mooshroom": {
+      "enabled": true,
+      "weight": 1
+    },
+    "mule": {
+      "enabled": true,
+      "weight": 1
+    },
+    "nautilus": {
+      "enabled": true,
+      "weight": 1
+    },
+    "ocelot": {
+      "enabled": true,
+      "weight": 1
+    },
+    "panda": {
+      "enabled": true,
+      "weight": 1
+    },
+    "parched": {
+      "enabled": true,
+      "weight": 1
+    },
+    "parrot": {
+      "enabled": true,
+      "weight": 1
+    },
+    "phantom": {
+      "enabled": true,
+      "weight": 1
+    },
+    "pig": {
+      "enabled": true,
+      "weight": 1
+    },
+    "piglin": {
+      "enabled": true,
+      "weight": 1
+    },
+    "piglin_brute": {
+      "enabled": true,
+      "weight": 1
+    },
+    "pillager": {
+      "enabled": true,
+      "weight": 1
+    },
+    "polar_bear": {
+      "enabled": true,
+      "weight": 1
+    },
+    "pufferfish": {
+      "enabled": true,
+      "weight": 1
+    },
+    "rabbit": {
+      "enabled": true,
+      "weight": 1
+    },
+    "ravager": {
+      "enabled": true,
+      "weight": 1
+    },
+    "salmon": {
+      "enabled": true,
+      "weight": 1
+    },
+    "sheep": {
+      "enabled": true,
+      "weight": 1
+    },
+    "shulker": {
+      "enabled": true,
+      "weight": 1
+    },
+    "silverfish": {
+      "enabled": true,
+      "weight": 1
+    },
+    "skeleton": {
+      "enabled": true,
+      "weight": 1
+    },
+    "skeleton_horse": {
+      "enabled": true,
+      "weight": 1
+    },
+    "slime": {
+      "enabled": true,
+      "weight": 1
+    },
+    "sniffer": {
+      "enabled": true,
+      "weight": 1
+    },
+    "snow_golem": {
+      "enabled": true,
+      "weight": 1
+    },
+    "spider": {
+      "enabled": true,
+      "weight": 1
+    },
+    "squid": {
+      "enabled": true,
+      "weight": 1
+    },
+    "stray": {
+      "enabled": true,
+      "weight": 1
+    },
+    "strider": {
+      "enabled": true,
+      "weight": 1
+    },
+    "sulfur_cube": {
+      "enabled": true,
+      "weight": 1
+    },
+    "tadpole": {
+      "enabled": true,
+      "weight": 1
+    },
+    "trader_llama": {
+      "enabled": true,
+      "weight": 1
+    },
+    "tropical_fish": {
+      "enabled": true,
+      "weight": 1
+    },
+    "turtle": {
+      "enabled": true,
+      "weight": 1
+    },
+    "vex": {
+      "enabled": true,
+      "weight": 1
+    },
+    "villager": {
+      "enabled": true,
+      "weight": 1
+    },
+    "vindicator": {
+      "enabled": true,
+      "weight": 1
+    },
+    "wandering_trader": {
+      "enabled": true,
+      "weight": 1
+    },
+    "warden": {
+      "enabled": true,
+      "weight": 0.25
+    },
+    "witch": {
+      "enabled": true,
+      "weight": 1
+    },
+    "wither": {
+      "enabled": true,
+      "weight": 0.1
+    },
+    "wither_skeleton": {
+      "enabled": true,
+      "weight": 1
+    },
+    "wolf": {
+      "enabled": true,
+      "weight": 1
+    },
+    "zoglin": {
+      "enabled": true,
+      "weight": 1
+    },
+    "zombie": {
+      "enabled": true,
+      "weight": 1
+    },
+    "zombie_horse": {
+      "enabled": true,
+      "weight": 1
+    },
+    "zombie_nautilus": {
+      "enabled": true,
+      "weight": 1
+    },
+    "zombie_villager": {
+      "enabled": true,
+      "weight": 1
+    },
+    "zombified_piglin": {
+      "enabled": true,
+      "weight": 1
+    }
+  },
+  "playerInstincts": false
+}
